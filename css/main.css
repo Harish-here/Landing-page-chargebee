@@ -15,8 +15,26 @@
    --font-proxima-light: ProximaNova-Light;
    --font-proxima-regular: ProximaNova-Regular;
    --font-roboto-light: Roboto-Light;
+
+   font-size: 16px;/* base value for rem to calculate*/
+
+   --color-main-heading: #525252;
+   --color-sub-heading: #666666;
+   --color-image-label-1: #8AB5D5;
+   --color-image-label-2: #CFA622;
+   --color-button-bg: #06C587;
+   --color-icon-info: #646464;
+   --color-footer-text: #222222;
      
 }
+/* normalize*/
+ul,li{ padding:0px;margin: 0px;list-style: none;}
+
+
+/* font family*/
+body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
+
+.proxima-bold{font-family: 'Proxima Nova Thin';}
 
 /*  font size*/
 .f-12{ font-size: 12px; }
@@ -28,7 +46,46 @@
 .f-24{ font-size: 24px; }
 .f-26{ font-size: 26px; }
 .f-32{ font-size: 32px; }
-.f-36{ font-size: 36px; }
+.f-36{ font-size: 2.25rem; }
 .f-38{ font-size: 38px; }
 
+/* color utility*/
+.bg-pale-blue{ background-color: #e6edf3; }
+.main-heading-color{ color: var(--color-main-heading); }
+.sub-heading-color{ color: var(--color-sub-heading); }
+.image-label-1{ color: var(--color-image-label-1); }
+.image-label-2{ color: var(--color-image-label-2); }
+.button-bg{ background-color: var(--color-button-bg);}
+.icon-info-color{ color: var(--color-icon-info);}
+.footer-text-color{ color: var(--color-footer-text);}
 
+
+/* avatar && logo*/
+.avatar-logo{
+   width: 40px;
+   height: 40px;
+}
+.company-logo{
+   width:9.375rem;
+}
+
+
+
+/** utility for hide /show when screen goes small or big */
+/* media query lift from https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488 */
+@media (min-width: 320px) and (max-width: 480px) {
+  
+ .hide-when-small{ display: none; }
+ .show-when-small-i{ display: inline-block; }
+ .show-when-small-b{ display: block; }
+  #footer .f-12{font-size: 1.25rem}
+ 
+   
+ }
+
+ @media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .hide-when-big{ display:none;}
+  .show-when-big-i{ display:inline-block;}
+  .show-when-big-b{ display:block;}
+ }
