@@ -6,7 +6,7 @@
 \____/|_| |_|\__,_|_|  \__, |\___|_.__/ \___|\___|
                        |___/                      
 
-/*********************** Commenting is sexy ******************************/
+/*********************** Commenting is sexy => ya,actually ******************************/
 /*********************** Write your styles below *************************/
 /* theme colors & font family */
 :root{
@@ -22,6 +22,7 @@
    --color-sub-heading: #666666;
    --color-image-label-1: #8AB5D5;
    --color-image-label-2: #CFA622;
+   --color-text-second-block:  #F6F8FC;
    --color-button-bg: #06C587;
    --color-icon-info: #646464;
    --color-footer-text: #222222;
@@ -49,12 +50,20 @@ body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
 .f-36{ font-size: 2.25rem; }
 .f-38{ font-size: 38px; }
 
+/* line-height utility */
+.ln-h-120{line-height: 120%}
+.ln-h-150{line-height: 150%}
+.ln-h-86{line-height: 86%}
+.ln-h-115{line-height: 115%}
+.ln-h-134{line-height: 134%}
+
 /* color utility*/
 .bg-pale-blue{ background-color: #e6edf3; }
 .main-heading-color{ color: var(--color-main-heading); }
 .sub-heading-color{ color: var(--color-sub-heading); }
 .image-label-1{ color: var(--color-image-label-1); }
 .image-label-2{ color: var(--color-image-label-2); }
+.text-second-block-color{ color: var(--color-text-second-block);}
 .button-bg{ background-color: var(--color-button-bg);}
 .icon-info-color{ color: var(--color-icon-info);}
 .footer-text-color{ color: var(--color-footer-text);}
@@ -65,9 +74,10 @@ body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
    width: 40px;
    height: 40px;
 }
-.company-logo{
-   width:9.375rem;
-}
+.company-logo{ width:9.375rem; }
+.companies-logo{ width:6.25rem;}
+.img-contanier-height{height:5rem;}
+#company-logo-section{min-height:12.5rem;}
 
 
 
