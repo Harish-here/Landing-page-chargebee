@@ -10,14 +10,14 @@
 /*********************** Write your styles below *************************/
 /* theme colors & font family */
 :root{
-   --font-proxima-bold: ProximaNova-Semibold;
-   --font-proxima-bold-lt: ProximaNova-SemiboldIt;
-   --font-proxima-light: ProximaNova-Light;
-   --font-proxima-regular: ProximaNova-Regular;
-   --font-roboto-light: Roboto-Light;
+   /* given font */
+   --font-proxima-bold:'proxima_nova_ltsemibold', Georgia, sans-serif;
+   --font-proxima-regular: 'Proxima Nova', Georgia, sans-serif;
+   --font-roboto-light: 'Roboto', sans-serif;;
 
    font-size: 16px;/* base value for rem to calculate*/
 
+   /* total colors given in the spec*/
    --color-main-heading: #525252;
    --color-sub-heading: #666666;
    --color-image-label-1: #8AB5D5;
@@ -34,29 +34,36 @@
      
 }
 /* normalize*/
-ul,li{ padding:0px;margin: 0px;list-style: none;}
+ul,li{
+   padding:0px;
+   margin: 0px;
+   list-style: none;
+}
 
 
-/* font family*/
-body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
+/* font family utility*/
+body{ font-family: var(--font-proxima-regular);}
+.proxima-semibold{font-family: var(--font-proxima-bold);}
+.proxima-lt{ font-family: var(--font-proxima-regular);}
+.roboto-lt{font-family: var(--font-roboto-light);}
 
-.proxima-semibold{font-family: 'proxima_nova_ltsemibold', Georgia, sans-serif;}
-.proxima-lt{ font-family: 'Proxima Nova', Georgia, sans-serif;}
-.roboto-lt{font-family: 'Roboto', sans-serif;}
 
+/*  font size utility
 
-/*  font size*/
-.f-12{ font-size: 12px; }
-.f-14{ font-size: 14px; }
-.f-16{ font-size: 16px; }
-.f-18{ font-size: 18px; }
-.f-19{ font-size: 19px; }
-.f-20{ font-size: 20px; }
-.f-24{ font-size: 24px; }
-.f-26{ font-size: 26px; }
-.f-32{ font-size: 32px; }
+for use of REM - ref: http://tachyons.io/docs/typography/scale/
+
+*/
+.f-12{ font-size: 0.75rem; }
+.f-14{ font-size: 0.875rem; }
+.f-16{ font-size: 1rem; }
+.f-18{ font-size: 1.125rem; }
+.f-19{ font-size: 1.1875rem; }
+.f-20{ font-size: 1.25rem; }
+.f-24{ font-size: 1.5rem; }
+.f-26{ font-size: 1.625rem; }
+.f-32{ font-size: 2rem; }
 .f-36{ font-size: 2.25rem; }
-.f-38{ font-size: 38px; }
+.f-38{ font-size: 2.375rem; }
 .w-5{width:1.875rem;}
 
 /* line-height utility */
@@ -76,17 +83,21 @@ body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
 .image-label-1{ color: var(--color-image-label-1); }
 .image-label-2{ color: var(--color-image-label-2); }
 .text-second-block-color{ color: var(--color-text-second-block);}
-.checkout-section-color{background-color:var(--color-portal-spl-text)}
-.button-bg{ background-color: var(--color-button-bg);}
+
 .testimonial-text-color{color: var(--color-button-bg);}
 .icon-info-color{ color: var(--color-icon-info);}
 .footer-text-color{ color: var(--color-footer-text);}
 .check-logo-color{color:var(--color-check-logo);}
 .li-heading-color{color: var(--color-list-heading);}
-.logo-bg-color{ background-color: var(--color-bg-logo);}
+
 .portal-spl-text-color{color:var(--color-portal-spl-text);}
 .b--white{ border-color: var(--color-text-second-block);}
 .b--dashed{border-color: var(--color-phone-border);}
+
+/* background color utility*/
+.logo-bg-color{ background-color: var(--color-bg-logo);}
+.checkout-section-color{background-color:var(--color-portal-spl-text)}
+.button-bg{ background-color: var(--color-button-bg);}
 
 .checkout-img{height:29.6875rem;width:20rem;}
 .checkout-img-container{width:22.5rem;}
@@ -123,7 +134,7 @@ body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
    content:"- - - -";
    color:white;
    position: absolute;
-   left: -1.75rem;
+   left: -1.85rem;
    top: 0.75rem;
    font-size:0.75rem;
 }
@@ -138,6 +149,7 @@ body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
   #footer-section .f-12{font-size: 1.25rem}
  .main-image{ width:7.1875rem; height:7.1875rem;}
  #portal-section{padding: 1.5625rem 0;}
+ #checkout-section{ padding-bottom: 0rem;}
  
  }
 
