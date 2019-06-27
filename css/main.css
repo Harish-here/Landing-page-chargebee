@@ -108,31 +108,43 @@ body{ font-family: 'Proxima Nova', Georgia, sans-serif;}
    height:36.25rem;
 }
 .company-logo{ width:9.375rem; }
-.companies-logo{ width:9.5rem;}
+.companies-logo{ width:8.5rem;}
 .img-contanier-height{height:5rem;}
-#company-logo-section,#portal-section{height:12.5rem;}
-#footer-section{height:8.4375rem;}
+#company-logo-section{height:12.5rem;}
+#footer-section,#portal-section{padding: 3.125rem 0;}
 #testimonial-section,#main-section{padding: 3.125rem 0;}
 #checkout-section{ padding-bottom: 6.25rem;}
 .main-image{width:14.3125rem; height:14.3125rem;}
-.br-pill{width:9.375rem;}
-.hide-when-big{display: block;}
+.br-pill{width:12.5rem;}
+.flex-full{flex:1 0 0px;}
+.push-left-inside{margin-left:-12.5rem;}
+
+.spl-dotted::before{
+   content:"- - - -";
+   color:white;
+   position: absolute;
+   left: -1.75rem;
+   top: 0.75rem;
+   font-size:0.75rem;
+}
 
 /** utility for hide /show when screen goes small or big */
 /* media query lift from https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488 */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 768px) {
   
  .hide-when-small{ display: none; }
  .show-when-small-i{ display: inline-block; }
  .show-when-small-b{ display: block; }
   #footer-section .f-12{font-size: 1.25rem}
+ .main-image{ width:7.1875rem; height:7.1875rem;}
+ #portal-section{padding: 1.5625rem 0;}
  
-   
  }
 
- @media (min-width: 1025px){
+ @media (min-width: 1024px){
   
   .hide-when-big{ display: none; }
   .show-when-big-i{ display: inline-block;}
   .show-when-big-b{ display: block;}
+  .br-pill{width:9.375rem;}
  }
