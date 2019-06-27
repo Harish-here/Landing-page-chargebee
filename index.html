@@ -8,8 +8,10 @@
         <!-- proxima web font courtesy - https://github.com/elliakou --->
         <link rel="stylesheet" href="./fonts/fonts.min.css"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+        <!-- included to reset all the browser specific styles-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+        
         <link rel="stylesheet" href="./css/main.css"/>
     </head>
     <body>
@@ -27,7 +29,7 @@
                    </div>
                </div>
                <div class='flex justify-center mt3'>
-                   <button class='f6 link dim br2 ph3 pv3 bb-3 b--green mb2 dib white button-bg ttu f-18 proxima-semibold'>signup & explore now</button>
+                   <button class='f6 link dim br2 ph3 pv3 bb-3 bl-0 bt-0 br-0 b--green mb2 dib white button-bg button-shadow b ttu f-18 proxima-semibold text-shadow'>signup & explore now</button>
                </div>
                <div class='flex justify-center hide-when-small mt5'>
                    <div class='w-75 tc icon-info-color'>
@@ -147,7 +149,7 @@
                         </ul>
                     </div>
                     <!-- testimonial section-->
-                    <div class='w-40-l w-40-m w-100-ns flex flex-column'>
+                    <div class='w-40-l w-40-m w-100-ns flex flex-column mt3-ns'>
                         <div class='f-26 main-heading-color ln-h-120 proxima-lt '>Some of our fantastic customers</div>
                         <ul>
                             <li class='pt3 mt3'>
@@ -168,7 +170,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class='hide-when- pt3 mt3'>
+                            <li class='hide-when- pt3 mt3 hide-when-small'>
                                 <div class='f-16 icon-info-color ln-h-150'>
                                         After switching to ChargeBee, it has
                                         been much simpler to manage and set
@@ -194,31 +196,28 @@
         <section id='company-logo-section' class='logo-bg-color'>
             <div class="ml3 mr3 pa3  flex justify-center items-center h-100">
                 <div class="w-90-ns w-90-m w-90-l flex flex-wrap">
-                    <div class="w-50 w-20-l w-20-m img-contanier-height flex justify-center items-center"><img class='companies-logo' src="./images/soylent-logo@2x.png" alt="soylent-logo"></div>
-                    <div class="w-50 w-20-l w-20-m img-contanier-height flex justify-center items-center"><img class='companies-logo' src="./images/freshdesk-logo@2x.png" alt="freshdesk-logo"></div>
-                    <div class="w-50 w-20-l w-20-m img-contanier-height flex justify-center items-center"><img class='companies-logo' src="./images/integratedhealthbw-logo@2x.png" alt=""></div>
-                    <div class="w-50 w-20-l w-20-m img-contanier-height flex justify-center items-center"><img class='companies-logo' src="./images/vinyl-logo@2x.png" alt="vinyl-logo"></div>
-                    <div class="w-50 w-20-l w-20-m img-contanier-height flex justify-center items-center hide-when-small"><img class='companies-logo' src="./images/enerspace-logo@2x.png" alt="enerspace-logo"></div>
+                    <div class="w-50 w-20-l w-20-m companies-logo-contanier flex justify-center items-center"><img class='companies-logo' src="./images/soylent-logo@2x.png" alt="soylent-logo"></div>
+                    <div class="w-50 w-20-l w-20-m companies-logo-contanier flex justify-center items-center"><img class='companies-logo' src="./images/freshdesk-logo@2x.png" alt="freshdesk-logo"></div>
+                    <div class="w-50 w-20-l w-20-m companies-logo-contanier flex justify-center items-center"><img class='companies-logo' src="./images/integratedhealthbw-logo@2x.png" alt=""></div>
+                    <div class="w-50 w-20-l w-20-m companies-logo-contanier flex justify-center items-center"><img class='companies-logo' src="./images/vinyl-logo@2x.png" alt="vinyl-logo"></div>
+                    <div class="w-50 w-20-l w-20-m companies-logo-contanier flex justify-center items-center hide-when-small"><img class='companies-logo' src="./images/enerspace-logo@2x.png" alt="enerspace-logo"></div>
                 </div>
             </div>
         </section>
         <section id='footer-section'>
             <div class="ml3 mr3 flex justify-center items-center h-100">
-                <div class='w-80 w-40-m w-40-l'>
+                <div class='w-80 w-50-m w-50-l'>
                     <ul class='flex flex-wrap items-center w-100 f-12 tc footer-text-color roboto-lt'>
                         <li class="pa3 w-100 w-20-l w-20-m">PRICING</li>
                         <li class="pa3 w-100 w-20-l w-20-m">FEATURES</li>
-                        <li class="w-100 w-20-l w-20-m show-when-big-i hide-when-small"><img class='company-logo' src="./images/chargebee-logo-footer@2x.png" alt="chargebee-logo-footer"></li>
+                        <li class="w-100 w-20-l w-20-m  show-when-big-i hide-when-small"><img class='company-logo' src="./images/chargebee-logo-footer@2x.png" alt="chargebee-logo-footer"></li>
                         <li class="pa3 w-100 w-20-l w-20-m">ABOUT</li>
                         <li class="pa3 w-100 w-20-l w-20-m">SUPPORT</li>
                         <!-- image for mobile-->
-                        <li class='w-100 hide-when-big show-when-small-b'><img class='company-logo' src="./images/chargebee-logo-footer@2x.png" alt="chargebee-logo-footer"></li>
+                        <li class='w-100 hide-when-big show-when-small-b mt3'><img class='company-logo' src="./images/chargebee-logo-footer@2x.png" alt="chargebee-logo-footer"></li>
                     </ul>
                 </div>
             </div>
         </section>   
-        
-        
-
     </body>
 </html>

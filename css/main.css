@@ -8,6 +8,9 @@
 
 /*********************** Commenting is sexy => ya,actually ******************************/
 /*********************** Write your styles below *************************/
+
+/*  library used - tachyons. website - tachyons.io */
+
 /* theme colors & font family */
 :root{
    /* given font */
@@ -64,7 +67,7 @@ for use of REM - ref: http://tachyons.io/docs/typography/scale/
 .f-32{ font-size: 2rem; }
 .f-36{ font-size: 2.25rem; }
 .f-38{ font-size: 2.375rem; }
-.w-5{width:1.875rem;}
+
 
 /* line-height utility */
 .ln-h-120{line-height: 120%}
@@ -76,37 +79,42 @@ for use of REM - ref: http://tachyons.io/docs/typography/scale/
 .ln-h-200{line-height: 150%;}
 
 /* color utility*/
-.bg-pale-blue{ background-color: #e6edf3; }
-.bg-pale-red{background-color: #e74c3c;}
+/*main-section*/
 .main-heading-color{ color: var(--color-main-heading); }
 .sub-heading-color{ color: var(--color-sub-heading); }
 .image-label-1{ color: var(--color-image-label-1); }
 .image-label-2{ color: var(--color-image-label-2); }
-.text-second-block-color{ color: var(--color-text-second-block);}
+.b--green{ border-color:#2ecc71 !important; } /* overwrite the default green  */
 
-.testimonial-text-color{color: var(--color-button-bg);}
-.icon-info-color{ color: var(--color-icon-info);}
+/* portal-section */
+.text-second-block-color{ color: var(--color-text-second-block); }
+
+/* checkout-section */
+.portal-spl-text-color{ color:var(--color-portal-spl-text); }
+.b--white{ border-color: var(--color-text-second-block); }
+.b--dashed{ border-color: var(--color-phone-border);}
+
+/* testimonial-section */
+.check-logo-color{ color:var(--color-check-logo); }
+.li-heading-color{ color: var(--color-list-heading); }
+.testimonial-text-color{ color: var(--color-button-bg); }
+.icon-info-color{ color: var(--color-icon-info); }
+
+/* footer-section */
 .footer-text-color{ color: var(--color-footer-text);}
-.check-logo-color{color:var(--color-check-logo);}
-.li-heading-color{color: var(--color-list-heading);}
 
-.portal-spl-text-color{color:var(--color-portal-spl-text);}
-.b--white{ border-color: var(--color-text-second-block);}
-.b--dashed{border-color: var(--color-phone-border);}
+/* --- */
+
 
 /* background color utility*/
 .logo-bg-color{ background-color: var(--color-bg-logo);}
 .checkout-section-color{background-color:var(--color-portal-spl-text)}
 .button-bg{ background-color: var(--color-button-bg);}
+.bg-pale-blue{ background-color: #e6edf3; }
+.bg-pale-red{background-color: #e74c3c;}
 
-.checkout-img{height:29.6875rem;width:20rem;}
-.checkout-img-container{width:22.5rem;}
 
-/* avatar && logo*/
-.avatar-logo{
-   width: 40px;
-   height: 40px;
-}
+/* checkout phone*/
 .phone-btn{
    width:2.9375rem;
    height: 2.9375rem;
@@ -118,17 +126,31 @@ for use of REM - ref: http://tachyons.io/docs/typography/scale/
    border-bottom-right-radius: 15%;
    height:36.25rem;
 }
+
+/* section wise  */
+
+#company-logo-section{ height:12.5rem; }
+#footer-section,#portal-section{ padding: 3.125rem 0; }
+#testimonial-section,#main-section{ padding: 3.125rem 0; }
+#checkout-section{ padding-bottom: 6.25rem; }
+
+/** image & their contaniers */
+
+.main-image{ width:14.3125rem; height:14.3125rem; }
+.checkout-img{ height:29.6875rem; width:20rem; }
+.checkout-img-container{ width:22.5rem; }
+
 .company-logo{ width:9.375rem; }
-.companies-logo{ width:8.5rem;}
-.img-contanier-height{height:5rem;}
-#company-logo-section{height:12.5rem;}
-#footer-section,#portal-section{padding: 3.125rem 0;}
-#testimonial-section,#main-section{padding: 3.125rem 0;}
-#checkout-section{ padding-bottom: 6.25rem;}
-.main-image{width:14.3125rem; height:14.3125rem;}
-.br-pill{width:12.5rem;}
-.flex-full{flex:1 0 0px;}
-.push-left-inside{margin-left:-12.5rem;}
+.companies-logo{ width:8.5rem; }
+.companies-logo-contanier{ height:5rem; }
+
+.avatar-logo{ width: 40px; height: 40px; }
+.w-5{ width:1.875rem; }
+
+/* miscellaneous utility*/
+.br-pill{ width:12.5rem; }
+.flex-full{ flex:1 0 0px; }
+.push-left-inside{ margin-left:-12.5rem; }
 
 .spl-dotted::before{
    content:"- - - -";
@@ -138,25 +160,34 @@ for use of REM - ref: http://tachyons.io/docs/typography/scale/
    top: 0.75rem;
    font-size:0.75rem;
 }
+.text-shadow{ text-shadow:  -0px -2px #000000; }
+.button-shadow{ box-shadow:inset 0 0 10px #04AF78; }
+.bb-3{ border-bottom-width: 0.1875rem; }
 
-/** utility for hide /show when screen goes small or big */
-/* media query lift from https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488 */
+/* media query */
+
+/* from phone to tablet*/
 @media (min-width: 320px) and (max-width: 768px) {
-  
- .hide-when-small{ display: none; }
- .show-when-small-i{ display: inline-block; }
- .show-when-small-b{ display: block; }
-  #footer-section .f-12{font-size: 1.25rem}
- .main-image{ width:7.1875rem; height:7.1875rem;}
- #portal-section{padding: 1.5625rem 0;}
- #checkout-section{ padding-bottom: 0rem;}
+
+   .hide-when-small{ display: none; }
+   .show-when-small-i{ display: inline-block; }
+   .show-when-small-b{ display: block; }
+
+   #footer-section .f-12{font-size: 1.25rem}
+   .main-image{ width:7.1875rem; height:7.1875rem;}
+   #portal-section{ padding: 1.5625rem 0; }
+   #checkout-section{ padding-bottom: 0rem;}
+   .mt3-ns{ margin-top: 2rem;}
  
  }
-
+/* desktops */
  @media (min-width: 1024px){
   
   .hide-when-big{ display: none; }
   .show-when-big-i{ display: inline-block;}
   .show-when-big-b{ display: block;}
-  .br-pill{width:9.375rem;}
+
+  .br-pill{ width:9.375rem; }
+
+  .mt3-ns{ margin-top: 0rem;}
  }
